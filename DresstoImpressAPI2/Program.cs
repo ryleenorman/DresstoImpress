@@ -11,6 +11,7 @@ builder.Services.AddScoped<IClothingSeasonService, ClothingSeasonService>();
 builder.Services.AddScoped<IWeatherTypeService, WeatherTypeService>();
 builder.Services.AddScoped<ITemperatureService, TemperatureService>();
 builder.Services.AddScoped<IUserOccupationService, UserOccupationService>();
+builder.Services.AddScoped<IPriceService, PriceService>();
 builder.Services.AddDbContext<DbContextClass>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

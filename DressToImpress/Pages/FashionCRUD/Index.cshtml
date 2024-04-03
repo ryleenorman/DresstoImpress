@@ -1,0 +1,42 @@
+﻿@page
+@model DresstoImpress.Pages.FashionCRUD.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Clothing[0].ClothingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clothing[0].ClothingSize)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Clothing) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClothingType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClothingSize)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ClothingID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ClothingID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ClothingID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,9 +1,11 @@
-﻿using DresstoImpressAPI2.Entities;
+﻿//By Emily Mago
 
-namespace DresstoImpressAPI2.Repositories
+using DresstoImpressAPI2.Entities;
+
+namespace DresstoImpressAPI.Repositories
 {
     public interface IOutfitService
     {
-        public Task<List<Outfit>> GetOutfitDetails(int OutfitID);
+        public Task<List<Outfit>> GetOutfitDetails(int outfitid);
     }
 }

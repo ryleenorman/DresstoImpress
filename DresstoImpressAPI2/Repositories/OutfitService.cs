@@ -1,9 +1,12 @@
-﻿using DresstoImpressAPI2.Data;
+﻿//By Emily Mago
+
+using DresstoImpressAPI2.Data;
 using DresstoImpressAPI2.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
-namespace DresstoImpressAPI2.Repositories
+namespace DresstoImpressAPI.Repositories
 {
     public class OutfitService : IOutfitService
     {
@@ -12,11 +15,15 @@ namespace DresstoImpressAPI2.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<Outfit>> GetOutfitDetails(int OutfitID)
+        public async Task<List<Outfit>> GetOutfitDetails(int outfitid)
         {
-            var param = new SqlParameter("@OutfitID", OutfitID);
-            var getOutfitDetails = await Task.Run(() => _dbContextClass.Outfit.FromSqlRaw("exec GetOutfitDetails @OutfitID", param).ToListAsync());
-            return getOutfitDetails;
+            var param = new SqlParameter("@OutfitID", outfitid);
+            var OutfitDetails = await _dbContextClass.Outfit.FromSqlRaw("exec GetOutfitDetails @OutfitID", param).ToListAsync();
+            return OutfitDetails;
+
+
         }
+
+
     }
 }

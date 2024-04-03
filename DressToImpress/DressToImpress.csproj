@@ -23,7 +23,9 @@
   </ItemGroup>
 	<ItemGroup>
 		<Compile Include="..\DresstoImpressAPI2\Entities\**\*.*">
+			<Link>Entities\%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Compile>
+		
 	</ItemGroup>
 
   <ItemGroup>

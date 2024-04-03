@@ -1,6 +1,6 @@
 ﻿// Emily Surface 
-using DresstoImpressAPI.Data;
-using DresstoImpressAPI.Entities;
+using DresstoImpressAPI2.Data;
+using DresstoImpressAPI2.Entities;
 using DresstoImpressAPI2.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DresstoImpressAPI.Repositories
+namespace DresstoImpressAPI2.Repositories
 {
     public class UserOccupationService : IUserOccupationService
     {

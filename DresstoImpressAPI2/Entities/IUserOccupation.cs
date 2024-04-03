@@ -1,8 +1,8 @@
 ﻿// Emily Surface 
-using DresstoImpressAPI.Entities;
+using DresstoImpressAPI2.Entities;
 using System.Threading.Tasks;
 
-namespace DresstoImpressAPI.Repositories
+namespace DresstoImpressAPI2.Repositories
 {
     public interface IUserOccupationService
     {

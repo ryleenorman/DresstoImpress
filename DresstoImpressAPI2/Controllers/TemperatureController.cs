@@ -1,9 +1,11 @@
 ﻿// Emily Surface 
-using DresstoImpressAPI.Entities;
-using DresstoImpressAPI.Repositories;
+using DresstoImpressAPI2.Repositories;
+using DresstoImpressAPI2.Entities;
+using DresstoImpressAPI2.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using DresstoImpressAPI.Repositories;
 
 namespace DresstoImpressAPI.Controllers
 {

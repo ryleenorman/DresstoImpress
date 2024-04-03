@@ -1,7 +1,6 @@
 ﻿// Emily Surface 
 using DresstoImpressAPI2.Data;
 using DresstoImpressAPI2.Entities;
-using DresstoImpressAPI2.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +22,7 @@ namespace DresstoImpressAPI2.Repositories
         public async Task<List<USERS>> GetUserOccupation(int UserID)
         {
             var param = new SqlParameter("@UserID", UserID);
-            var userOccupation = await _context.Users
+            var userOccupation = await _context.USERS
                 .FromSqlRaw("EXEC SeeOccupation @UserID", param)
                 .ToListAsync();
 

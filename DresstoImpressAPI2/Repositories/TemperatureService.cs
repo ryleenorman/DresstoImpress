@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
+using DresstoImpressAPI.Repositories;
 
 namespace DresstoImpressAPI2.Repositories { }
 

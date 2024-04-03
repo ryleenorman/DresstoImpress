@@ -9,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IOutfitService, OutfitService>();
 builder.Services.AddScoped<IClothingSeasonService, ClothingSeasonService>();
 builder.Services.AddScoped<IWeatherTypeService, WeatherTypeService>();
-Builder.Services.AddScoped<ITemperatureService, TemperatureService>();
-Builder.Services.AddScoped<IUserOccupationService, UserOccupationService>();
+builder.Services.AddScoped<ITemperatureService, TemperatureService>();
+builder.Services.AddScoped<IUserOccupationService, UserOccupationService>();
 builder.Services.AddDbContext<DbContextClass>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

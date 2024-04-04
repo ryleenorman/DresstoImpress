@@ -15,5 +15,6 @@ namespace DresstoImpress.Data
         public DbSet<DresstoImpressAPI2.Entities.ClothingBySeason> ClothingBySeason { get; set; } = default!;
         public DbSet<DresstoImpressAPI2.Entities.USERS> USERS { get; set; } = default!;
         public DbSet<DresstoImpressAPI2.Entities.WeatherByType> WeatherByType { get; set; } = default!;
+        public DbSet<DresstoImpressAPI2.Entities.Cart> Cart { get; set; } = default!;
     }
 }

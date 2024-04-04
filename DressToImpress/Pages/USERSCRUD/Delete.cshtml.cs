@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using DresstoImpress.Data;
 using DresstoImpressAPI2.Entities;
 
-namespace DresstoImpress.Pages.FashionCRUD
+namespace DresstoImpress.Pages.USERSCRUD
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace DresstoImpress.Pages.FashionCRUD
         }
 
         [BindProperty]
-        public Clothing Clothing { get; set; } = default!;
+        public USERS USERS { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,15 +29,15 @@ namespace DresstoImpress.Pages.FashionCRUD
                 return NotFound();
             }
 
-            var clothing = await _context.Clothing.FirstOrDefaultAsync(m => m.ClothingID == id);
+            var users = await _context.USERS.FirstOrDefaultAsync(m => m.UserID == id);
 
-            if (clothing == null)
+            if (users == null)
             {
                 return NotFound();
             }
             else
             {
-                Clothing = clothing;
+                USERS = users;
             }
             return Page();
         }
@@ -49,11 +49,11 @@ namespace DresstoImpress.Pages.FashionCRUD
                 return NotFound();
             }
 
-            var clothing = await _context.Clothing.FindAsync(id);
-            if (clothing != null)
+            var users = await _context.USERS.FindAsync(id);
+            if (users != null)
             {
-                Clothing = clothing;
-                _context.Clothing.Remove(Clothing);
+                USERS = users;
+                _context.USERS.Remove(USERS);
                 await _context.SaveChangesAsync();
             }
 

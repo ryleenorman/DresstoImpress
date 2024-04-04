@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using DresstoImpress.Data;
 using DresstoImpressAPI2.Entities;
 
-namespace DresstoImpress.Pages.FashionCRUD
+namespace DresstoImpress.Pages.USERSCRUD
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace DresstoImpress.Pages.FashionCRUD
         }
 
         [BindProperty]
-        public Clothing Clothing { get; set; } = default!;
+        public USERS USERS { get; set; } = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -35,7 +35,7 @@ namespace DresstoImpress.Pages.FashionCRUD
                 return Page();
             }
 
-            _context.Clothing.Add(Clothing);
+            _context.USERS.Add(USERS);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

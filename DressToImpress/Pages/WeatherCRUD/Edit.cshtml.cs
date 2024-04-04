@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using DresstoImpress.Data;
 using DresstoImpressAPI2.Entities;
 
-namespace DresstoImpress.Pages.FashionCRUD
+namespace DresstoImpress.Pages.WeatherCRUD
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace DresstoImpress.Pages.FashionCRUD
         }
 
         [BindProperty]
-        public Clothing Clothing { get; set; } = default!;
+        public Weather Weather { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,12 +30,12 @@ namespace DresstoImpress.Pages.FashionCRUD
                 return NotFound();
             }
 
-            var clothing =  await _context.Clothing.FirstOrDefaultAsync(m => m.ClothingID == id);
-            if (clothing == null)
+            var weather =  await _context.Weather.FirstOrDefaultAsync(m => m.WeatherID == id);
+            if (weather == null)
             {
                 return NotFound();
             }
-            Clothing = clothing;
+            Weather = weather;
             return Page();
         }
 
@@ -48,7 +48,7 @@ namespace DresstoImpress.Pages.FashionCRUD
                 return Page();
             }
 
-            _context.Attach(Clothing).State = EntityState.Modified;
+            _context.Attach(Weather).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace DresstoImpress.Pages.FashionCRUD
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClothingExists(Clothing.ClothingID))
+                if (!WeatherExists(Weather.WeatherID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace DresstoImpress.Pages.FashionCRUD
             return RedirectToPage("./Index");
         }
 
-        private bool ClothingExists(int id)
+        private bool WeatherExists(int id)
         {
-            return _context.Clothing.Any(e => e.ClothingID == id);
+            return _context.Weather.Any(e => e.WeatherID == id);
         }
     }
 }

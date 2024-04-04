@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using DresstoImpress.Data;
 using DresstoImpressAPI2.Entities;
 
-namespace DresstoImpress.Pages.FashionCRUD
+namespace DresstoImpress.Pages.OutfitCRUD
 {
     public class IndexModel : PageModel
     {

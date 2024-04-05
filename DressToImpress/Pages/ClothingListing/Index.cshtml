@@ -19,6 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Clothing[0].ClothingSize)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clothing[0].Price)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -31,6 +34,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ClothingSize)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ClothingID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ClothingID">Details</a> |

@@ -11,6 +11,8 @@ namespace DresstoImpressAPI2.Entities
     public string ClothingType { get; set; }
     public string ClothingSize { get; set; }
 
+    public decimal Price { get; set; }
+
         }
 
     }

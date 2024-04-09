@@ -1,0 +1,10 @@
+﻿@page
+@model DresstoImpress.Pages.OutfitModel
+@{
+    var outfitId = HttpContext.Request.Query["outfitId"];
+}
+<!-- By Emily Mago -->
+<div id="outfitOccasion" style="visibility : visible"></div>
+
+
+<script type="module">getOutfitDetails(@outfitId)</script>

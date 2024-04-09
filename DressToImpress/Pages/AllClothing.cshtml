@@ -1,7 +1,13 @@
 ﻿@page
 @model DresstoImpress.Pages.LookBookModel
-@{
+@using DresstoImpressAPI2.Entities
+@using Microsoft.AspNetCore.Mvc;
+@{ 
+  
+    
 }
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,3 +142,25 @@
 
 
 </body>
+</html>
+
+<!-- By Emily Mago -->
+<form id="occasionForm">
+    <input type="number" id="outfitId" name="outfitId" placeholder="Enter Outfit ID" required />
+    <button type="button" id="submitBtn">Get Occasion</button>
+</form>
+
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function () {
+        const outfitId = document.getElementById('outfitId').value;
+        const outfitPageUrl = `/Outfit?outfitId=${outfitId}`;
+        window.location.href = outfitPageUrl;
+    });
+</script>
+
+
+
+
+
+

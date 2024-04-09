@@ -1,0 +1,11 @@
+﻿@page
+@using DresstoImpressAPI2.Entities
+@model DresstoImpress.Pages.CartModel
+@{
+    var clothingId = HttpContext.Request.Query["clothingId"];
+}
+<!-- By Emily Mago -->
+<div id="price" style="visibility: visible;"></div>
+<script type="module">
+    getPriceDetails(@clothingId);
+</script>

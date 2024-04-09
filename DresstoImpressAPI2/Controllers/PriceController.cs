@@ -1,8 +1,8 @@
 ﻿//By Emily Mago
 
-using DresstoImpressAPI2.Entities;
 using DresstoImpressAPI2.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace DresstoImpressAPI2.Controllers
 {
@@ -10,17 +10,24 @@ namespace DresstoImpressAPI2.Controllers
     [ApiController]
     public class PriceController : Controller
     {
-        private readonly IPriceService price_em;
-        public PriceController(IPriceService Price_EM)
-        {
-            this.price_em = Price_EM;
-        }
-        [HttpGet("{clothingid}")]
-        public async Task<List<Clothing>> GetPriceDetails(int clothingid)
-        {
-            var PriceDetails = await price_em.GetPriceDetails(clothingid);
+        private readonly IPriceService priceService;
 
-            return PriceDetails;
+        public PriceController(IPriceService PriceService)
+        {
+            this.priceService = PriceService;
+        }
+
+        [HttpGet("{clothingId}")]
+        public async Task<ActionResult<decimal?>> GetPriceDetails(int clothingId)
+        {
+            var price = await priceService.GetPriceDetails(clothingId);
+
+            if (price == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(price);
         }
     }
 }

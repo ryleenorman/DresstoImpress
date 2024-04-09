@@ -13,6 +13,18 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowMyRazorPagesApp",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+             .AllowAnyHeader()
+            .AllowAnyMethod();
+        }
+
+        );
+});
 
 var app = builder.Build();
 
@@ -32,6 +44,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseHttpsRedirection();
+
+app.UseCors("AllowMyRazorPagesApp");
 
 app.UseAuthorization();
 

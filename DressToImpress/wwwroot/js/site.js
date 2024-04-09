@@ -7,7 +7,7 @@
 async function getOutfitDetails(outfitId) {
     const response = await fetch(`https://localhost:7044/api/Outfit/${outfitId}`);
     const data = await response.json();
-    document.getElementById('outfitOccasion').innerHTML = data[0].outfitOccasion; // Corrected property name
+    document.getElementById('outfitOccasion').innerHTML = data[0].outfitOccasion;
     document.getElementById('outfitOccasion').style.visibility = "visible";
 }
 

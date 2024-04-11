@@ -32,14 +32,14 @@
     </div>
 
     <form id="WeatherTypeForm" action="/Weather">
-        <input type="number" id="WeatherID"/>
-        <input type="submit" id="submitBtn" value="Find Weather Type" onclick="GetWeatherByType(WeatherID)" class="button" />
+        <input type="number" id="WeatherID" label="WeatherID"/>
+        <input type="button" id="submitBtn" value="Find Weather Type" onclick="GetWeatherByType(document.getElementById('WeatherID').value)" class="button" />
     </form>
     <div id="results"></div>
     <script type="module">GetWeatherByType()</script>
 
-    <div id="results"></div>
+    <div id="weatherType"></div>
     <div id="Weather"></div>
-    <script type="module">GetWeatherByType(@weatherType)</script>
+    
 
 </body>

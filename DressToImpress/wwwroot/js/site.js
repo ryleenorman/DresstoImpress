@@ -24,5 +24,11 @@ async function getPriceDetails(clothingId) {
     }
 }
 
+async function GetWeatherByType(WeatherID) {
+    const response = await fetch(`https://localhost:7044/api/WeatherType/${WeatherID}`);
+    const data = await response.json();
+    document.getElementById('weatherType').innerHTML = data[0].weatherType;
+    document.getElementById('weatherType').style.visibility = 'visible';
+}
 
  

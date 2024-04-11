@@ -6,6 +6,7 @@
 @model DresstoImpress.Pages.WeatherModel;
 @{
     var WeatherID = HttpContext.Request.Query["WeatherID"];
+    var weatherType = HttpContext.Request.Query["weatherType"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -29,5 +30,16 @@
             <a href="https://weather.com/" class="button">Check Weather</a>
         </div>
     </div>
+
+    <form id="WeatherTypeForm" action="/Weather">
+        <input type="number" id="WeatherID"/>
+        <input type="submit" id="submitBtn" value="Find Weather Type" onclick="GetWeatherByType(WeatherID)" class="button" />
+    </form>
+    <div id="results"></div>
+    <script type="module">GetWeatherByType()</script>
+
+    <div id="results"></div>
+    <div id="Weather"></div>
+    <script type="module">GetWeatherByType(@weatherType)</script>
 
 </body>

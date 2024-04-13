@@ -37,4 +37,5 @@ async function GetTemperature(WeatherID) {
     document.getElementById('temperature').style.visibility = 'visible';
 }
 
+
  

@@ -4,10 +4,8 @@ using System.Threading.Tasks;
 
 namespace DresstoImpressAPI.Repositories
 {
-
-
     public interface ITemperatureService
     {
-        Task<List<Weather>> GetTemperature(int WeatherID);
+        Task<List<GetTemperature>> GetTemperature(int WeatherID);
     }
 }

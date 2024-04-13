@@ -23,12 +23,18 @@ async function getPriceDetails(clothingId) {
         console.error('Price not found for the specified clothing ID');
     }
 }
-
+//Rylee Norman
 async function GetWeatherByType(WeatherID) {
     const response = await fetch(`https://localhost:7044/api/WeatherType/${WeatherID}`);
     const data = await response.json();
     document.getElementById('weatherType').innerHTML = data[0].weatherType;
     document.getElementById('weatherType').style.visibility = 'visible';
+}
+async function GetTemperature(WeatherID) {
+    const response = await fetch(`https://localhost:7044/api/Temperature/${WeatherID}`);
+    const data = await response.json();
+    document.getElementById('temperature').innerHTML = data[0].temperature;
+    document.getElementById('temperature').style.visibility = 'visible';
 }
 
  

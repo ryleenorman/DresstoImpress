@@ -16,5 +16,6 @@ namespace DresstoImpressAPI2.Data
 
         public DbSet<USERS> USERS { get; set; }
         public DbSet<Clothing> Clothing { get; set; }
+        public DbSet<GetTemperature> GetTemperature { get; set; }
     }
 }

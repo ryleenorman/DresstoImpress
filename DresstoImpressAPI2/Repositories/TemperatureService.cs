@@ -21,10 +21,10 @@ public class TemperatureService : ITemperatureService
         _context = dbContextClass;
     }
 
-    public async Task<List<Weather>> GetTemperature(int WeatherID)
+    public async Task<List<GetTemperature>> GetTemperature(int WeatherID)
     {
         var param = new SqlParameter("@WeatherID", WeatherID);
-        var temperatures = await _context.Weather
+        var temperatures = await _context.GetTemperature
             .FromSqlRaw("EXEC GetTemperature @WeatherID", param)
             .ToListAsync();
 

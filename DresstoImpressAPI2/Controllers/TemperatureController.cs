@@ -20,10 +20,10 @@ namespace DresstoImpressAPI.Controllers
             _temperature = temperature;
         }
 
-        [HttpGet("{WeatherId}")]
-        public async Task<ActionResult<List<Weather>>> GetTemperature(int WeatherId)
+        [HttpGet("{WeatherID}")]
+        public async Task<ActionResult<List<GetTemperature>>> GetTemperature(int WeatherID)
         {
-            var temperatures = await _temperature.GetTemperature(WeatherId);
+            var temperatures = await _temperature.GetTemperature(WeatherID);
             if (temperatures == null)
             {
                 return NotFound();

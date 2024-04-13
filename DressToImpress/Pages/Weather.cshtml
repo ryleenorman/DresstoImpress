@@ -7,6 +7,7 @@
 @{
     var WeatherID = HttpContext.Request.Query["WeatherID"];
     var weatherType = HttpContext.Request.Query["weatherType"];
+    var temperature = HttpContext.Request.Query["temperature"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +41,16 @@
 
     <div id="weatherType"></div>
     <div id="Weather"></div>
-    
+
+    <form id="TemperatureForm" action="/Weather">
+        <input type="number" id="WeatherId" label="WeatherId" />
+        <input type="button" id="submitBtn2" value="Find Temperature" onclick="GetTemperature(document.getElementById('WeatherId').value)" class="button" />
+    </form>
+    <div id="results2"></div>
+    <script type="module">GetTemperature()</script>
+
+    <div id="temperature"></div>
+    <div id="WeatherTemperature"></div>
 
 </body>
+</html>

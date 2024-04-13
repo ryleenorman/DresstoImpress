@@ -1,12 +1,16 @@
 USE [FashionWeatherDB]
 GO
 
-DECLARE @RC int
-DECLARE @WeatherID int
-
--- TODO: Set parameter values here.
-
-EXECUTE @RC = [dbo].[GetWeatherByType] 
-   @WeatherID
+CREATE PROCEDURE [dbo].[GetWeatherByType]
+	@WeatherID int
+AS
+BEGIN
+	SELECT WeatherID, WeatherType
+	From Weather
+	Where WeatherID=@WeatherID;
+END
 GO
+/*
+EXECUTE GetWeatherByType @WeatherID=1
+*/
 

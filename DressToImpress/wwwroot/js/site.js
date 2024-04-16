@@ -30,6 +30,7 @@ async function GetWeatherByType(WeatherID) {
     document.getElementById('weatherType').innerHTML = data[0].weatherType;
     document.getElementById('weatherType').style.visibility = 'visible';
 }
+//Rylee Norman
 async function GetTemperature(WeatherID) {
     const response = await fetch(`https://localhost:7044/api/Temperature/${WeatherID}`);
     const data = await response.json();

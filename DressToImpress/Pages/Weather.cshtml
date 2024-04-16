@@ -17,42 +17,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .hero-image {
+            background-image: url("Weather1.jpg");
+            height: 50vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+
+            .hero-text h1 {
+                font-size: 50px;
+            }
+
+            .hero-text p {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .hero-text button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 25px;
+                color: white;
+                background-color: black;
+                text-align: center;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+                .hero-text button:hover {
+                    background-color: #555;
+                }
+
+        hr.solid {
+            border-top: 3px solid black;
+        }
+
+        .hero-image2 {
+            background-image: url("Weather2.jpg");
+            height: 50vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text2 {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+
+            .hero-text2 h1 {
+                font-size: 50px;
+            }
+
+            .hero-text2 p {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .hero-text2 button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 25px;
+                color: white;
+                background-color: black;
+                text-align: center;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+                .hero-text2 button:hover {
+                    background-color: #555;
+                }
+
+        .hero-image3 {
+            background-image: url("Weather3.jpg");
+            height: 50vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text3 {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+
+            .hero-text3 h1 {
+                font-size: 50px;
+            }
+
+            .hero-text3 p {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .hero-text3 button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 25px;
+                color: white;
+                background-color: black;
+                text-align: center;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+                .hero-text3 button:hover {
+                    background-color: #555;
+                }
+    </style>
 </head>
 <body>
-
     <div class="header">
         <h1>Weather Forecast</h1>
     </div>
-
-    <div class="row">
-        <div class="columnForOR">
-            <h2>Don't Get Caught In The Rain</h2>
-            <p>Check your forecast for this week</p>
-            <a href="https://weather.com/" class="button">Check Weather</a>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Find Weather By Type</h1>
+            <p>Be prepared for all types of weather</p>
+            <form id="WeatherTypeForm" action="/Weather">
+                <input type="number" id="WeatherID" label="WeatherID" />
+                <input type="button" id="submitBtn" value="Find Weather Type" onclick="GetWeatherByType(document.getElementById('WeatherID').value)" class="button" />
+            </form>
+            <div id="results"></div>
+            <script type="module">GetWeatherByType()</script>
+            <div id="weatherType"></div>
+            <div id="Weather"></div>
         </div>
     </div>
 
+    <hr class="solid">
 
-    <form id="WeatherTypeForm" action="/Weather">
-        <input type="number" id="WeatherID" label="WeatherID"/>
-        <input type="button" id="submitBtn" value="Find Weather Type" onclick="GetWeatherByType(document.getElementById('WeatherID').value)" class="button" />
-    </form>
-    <div id="results"></div>
-    <script type="module">GetWeatherByType()</script>
+    <div class="hero-image2">
+        <div class="hero-text2">
+            <h1>Find Weather By Temperature</h1>
+            <p>Don't forget to check your weather temperature</p>
+            <form id="TemperatureForm" action="/Weather">
+                <input type="number" id="WeatherId" label="WeatherId" />
+                <input type="button" id="submitBtn2" value="Find Temperature" onclick="GetTemperature(document.getElementById('WeatherId').value)" class="button" />
+            </form>
+            <div id="results2"></div>
+            <script type="module">GetTemperature()</script>
+            <div id="temperature"></div>
+            <div id="WeatherTemperature"></div>
+        </div>
+    </div>
 
-    <div id="weatherType"></div>
-    <div id="Weather"></div>
+    <hr class="solid">
 
-    <form id="TemperatureForm" action="/Weather">
-        <input type="number" id="WeatherId" label="WeatherId" />
-        <input type="button" id="submitBtn2" value="Find Temperature" onclick="GetTemperature(document.getElementById('WeatherId').value)" class="button" />
-    </form>
-    <div id="results2"></div>
-    <script type="module">GetTemperature()</script>
-
-    <div id="temperature"></div>
-    <div id="WeatherTemperature"></div>
-
+    <div class="hero-image3">
+        <div class="hero-text3">
+            <h1>Weather Forecast for Your Location</h1>
+            <p>Check your forecast for the day</p>
+            <a href="https://weather.com/" class ="button">Get Started</a>
+        </div>
+    </div>
 
 </body>
 </html>

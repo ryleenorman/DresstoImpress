@@ -27,14 +27,6 @@ This page is linked to the first hero image button on the Home Page. This is whe
 
 This page is linked to the second hero image button on the Home Page. This is where the user can go to get season inspiration, more about the “brand image” and favorite picks from the creator. I wanted this page to give more personality to the brand and almost give the feel of a blog but a more refined and sophisticated version. It is composed of a four column layout also from W3Schools, for each of the four seasons of the year. At the bottom of the page there is a table with more details about inspiration for the outfit picks from the creator, which includes individuals known for their wardrobe picks, what their occupation was and what time period they are from. The table I used is one from the Bootstrap section on W3Schools. I also used a lot of my header tags throughout this page such as &lt;h1> and &lt;h2>.
 
-### Inventory 
-
-Our inventory page or AllClothing inside the code, allows the user to see all of the outfits that are inside of the database at the time.  In its current state, the operater of the website would need to hard code each of the images into the page.  The layout of this page is mirrored by the Look Book page with the same makeup.  Additionally inside of this page, there is an API integration into the top of the page that allows the user to be able to search for the outfit that they are looking for by the ID of the image.  In the future, searching by the ID will hopefully make the search easier for the user by being able to find the specific outfit that they are looking for. 
-
-### Weather 
-
-In our weather page, the user will be able to view the weather via the Weather Channel website or be able to search the weather via our APIs.  One of the APIs that are inside of the page lets the user generate the weather based on the temperature that is inserted.  Additionally, the second API lets the user get the weather based on the season that is inserted.  
-
 
 ## Research Summary
 

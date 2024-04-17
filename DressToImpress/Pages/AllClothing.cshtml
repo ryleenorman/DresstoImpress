@@ -25,7 +25,14 @@
         <p>Every Outfit, All the Time</p>
     </div>
 
-
+    <form id="OutfitID" action="/AllClothing">
+        <input type="number" id="OutfitID" label="OutfitID" />
+        <input type="button" id="submitBtn" value="Find Outfit by ID Number" onclick="GetOutfitID(document.getElementById('OutfitID').value)" class="button" />
+    </form>
+    <div id="results"></div>
+    <script type="module">GetOutfitID()</script>
+    <div id="OutfitType"></div>
+    <div id="Outfit"></div>
     <div class="row">
         <div class="column">
          

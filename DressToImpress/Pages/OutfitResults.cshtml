@@ -56,6 +56,20 @@
             imageElement.src = imageFilenames[randomIndex];
         }
     </script>
-   
+    <div class="column2ForOR">
+        <h2>Your Outfits for the Week</h2>
+        <p>Outfits based on this seasons weather!</p>
+
+        <form id="UserID" action="/OutfitResults">
+            <input type="number" id="UserID" label="UserID" />
+            <input type="button" id="submitBtn" value="Find User Occupations!" onclick="GetUserOccupation(document.getElementById('UserID').value)" class="button" />
+        </form>
+        <div id="results"></div>
+        <script type="module">GetUserOccupation()</script>
+        <div id="UserOCC"></div>
+        <div id="UserOCC"></div>
+        <div class="row">
+            <div class="column">
+            </div>
     </body>
 

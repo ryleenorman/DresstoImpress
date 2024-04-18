@@ -3,8 +3,9 @@
 @using DresstoImpressAPI2.Entities
 @using Microsoft.AspNetCore.Mvc;
 @{ 
-  
+    var OutfitID = HttpContext.Request.Query["OutfitID"];
     
+   
 }
 
 
@@ -31,9 +32,13 @@
     </form>
     <div id="results"></div>
     <script type="module">GetOutfitID()</script>
-    <div id="OutfitType"></div>
+    <div id="Outfit"></div>
     <div id="Outfit"></div>
     <div class="row">
+        <script type=“module”>
+            GetOutfitDetails(‘@OutfitID’);
+
+        </script>
         <div class="column">
          
             <img src="~/WinterSurf.png" alt="Winter Outfit" />

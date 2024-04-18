@@ -48,8 +48,8 @@ async function GetUserOccupation(UserID) {
 async function GetOutfitID(OutfitID) {
     const response = await fetch(`https://localhost:7044/api/OutfitID/${OutfitID}`);
     const data = await response.json();
-    document.getElementById('outfitid').innerHTML = data[0].outfitId;
-    document.getElementById('outfitid').style.visibility = 'visible';
+    document.getElementById('OutfitID').innerHTML = data[0].OutfitID;
+    document.getElementById('OutfitID').style.visibility = 'visible';
 }
 
 

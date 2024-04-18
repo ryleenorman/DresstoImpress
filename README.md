@@ -4,9 +4,9 @@
 
 ## Creators
 
-### * Rylee Norman
-### * Emily Surface
-### * Emily Mago
+### Rylee Norman
+### Emily Surface
+### Emily Mago
 
 
 ## Introduction (Description)

@@ -2,6 +2,13 @@
 
 ![Image Alt text](/DressToImpress/DresstoImpressLogo.jpg "Dress to Impress")
 
+## Creators
+
+### Rylee Norman
+### Emily Surface
+### Emily Mago
+
+
 ## Introduction (Description)
 
 The goal of this project is to create a webpage that generates an outfit for the user based on current weather data. During my creative process, I noticed my roommate complaining that the weather had ruined his shoes, which sparked my idea for a website to prevent just that. Not only did I want this website to save everyone’s nice shoes, I wanted to tie in an aspect to save myself time in the mornings, which is selecting an outfit. I spend a lot of my time on Pinterest looking for inspiration, so not only would this website be efficient for preparing for the weather, but also give a random generation of an outfit so that each day can be something new, without having to brainstorm or search for yourself. Our ultimate goal is for the user to obtain a randomly generated outfit (based on weather conditions and occasion), and be able to purchase the outfit directly from our website. We hope to also integrate third-parties or businesses as User Generated Content to post and sell clothing on our website for our profit.The concept is there along with the website design and color scheme, but could use a few functional details.

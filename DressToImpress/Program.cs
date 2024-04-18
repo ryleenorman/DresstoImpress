@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowMyRazorPagesApp",
         builder =>
         {
-            builder.WithOrigins("http://localhost:7044")
+            builder.AllowAnyOrigin()
              .AllowAnyHeader()
             .AllowAnyMethod();
         }

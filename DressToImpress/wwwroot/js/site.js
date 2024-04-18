@@ -37,6 +37,20 @@ async function GetTemperature(WeatherID) {
     document.getElementById('temperature').innerHTML = data[0].temperature;
     document.getElementById('temperature').style.visibility = 'visible';
 }
+// Emily Surface
+async function GetUserOccupation(UserID) {
+    const response = await fetch(`https://localhost:7044/api/Occupation/${UserID}`);
+    const data = await response.json();
+    document.getElementById('Occupation').innerHTML = data[0].occupation;
+    document.getElementById('Occupation').style.visibility = 'visible';
+}
+// Emily Surface
+async function GetOutfitID(OutfitID) {
+    const response = await fetch(`https://localhost:7044/api/OutfitID/${OutfitID}`);
+    const data = await response.json();
+    document.getElementById('outfitid').innerHTML = data[0].outfitId;
+    document.getElementById('outfitid').style.visibility = 'visible';
+}
 
 
  

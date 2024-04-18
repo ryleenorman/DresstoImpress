@@ -6,8 +6,10 @@
 @model DresstoImpress.Pages.OutfitResultsModel
 @{
     
-    var UserID = HttpContext.Request.Query["UserID"];
-    var UserOccupation = HttpContext.Request.Query["UserOccupation"];
+    var UserId = HttpContext.Request.Query["UserId"];
+    var userOccupation = HttpContext.Request.Query["userOccupation"];
+    var ClothingID = HttpContext.Request.Query["ClothingID"];
+    var clothingSeason = HttpContext.Request.Query["clothingSeason"];
 
 }
 <!DOCTYPE html>
@@ -30,6 +32,7 @@
                 <h2>Check Out All Outfits for All Seasons!</h2>
                 <button onclick="window.location.href='AllClothing'">All Picks!</button>
             </div>
+
 
 
         <hr class="solid">
@@ -61,24 +64,36 @@
         }
     </script>
     <div class="column2ForOR">
-        <h2>See User Occupations!</h2>
+        <h2>See User Occupations</h2>
         <p>Our Users have a vast array of jobs! See how your work life and weather align!</p>
         
-        <form id="UserID" action="/OutfitResults">
-            <input type="number" id="UserID" label="UserID" />
-            <input type="button" id="submitBtn" value="Find User Occupations!" onclick="GetUserOccupation(document.getElementById('UserID').value)" class="button" />
+        <form id="UserOccupationForm" action="/OutfitResults">
+            <input type="number" id="UserId" label="UserID" />
+            <input type="button" id="submitBtn" value="Find User Occupations" onclick="GetUserOccupation(document.getElementById('UserId').value)" class="button" />
         </form>
         <div id="results"></div>
         <script type="module">GetUserOccupation()</script>
-        <div id="Occupation"></div>
-        <div id="Occupation"></div>
+        <div id="userOccupation"></div>
+        <div id="OutfitResults"></div>
         <div class="row">
             <div class="column">
                     <script type=“module”>
-                        GetUserOccupation(‘@UserID’);
-
+                        GetUserOccupation(‘@UserId’);
                     </script>
             </div>
+        </div>
+            <h2>View Clothing Season</h2>
+            <p>Check and see the season assigned to your piece of clothing.</p>
+            <form id="ClothingSeasonForm" action="/OutfitResults">
+                <input type="number" id="ClothingID" label="ClothingID" />
+                <input type="button" id="submitBtn" value="Find Clothing Season" onclick="GetClothingSeason(document.getElementById('ClothingID').value)" class="button" />
+            </form>
+            <div id="results"></div>
+            <script type="module">GetClothingSeason()</script>
+            <div id="clothingSeason"></div>
+            <div id="OutfitResults"></div>
+
+        </div>
             </body>
             </html>
     

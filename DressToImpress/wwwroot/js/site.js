@@ -38,18 +38,18 @@ async function GetTemperature(WeatherID) {
     document.getElementById('temperature').style.visibility = 'visible';
 }
 // Emily Surface
-async function GetUserOccupation(UserID) {
-    const response = await fetch(`https://localhost:7044/api/Occupation/${UserID}`);
+async function GetUserOccupation(UserId) {
+    const response = await fetch(`https://localhost:7044/api/UserOccupation/${UserId}`);
     const data = await response.json();
-    document.getElementById('Occupation').innerHTML = data[0].occupation;
-    document.getElementById('Occupation').style.visibility = 'visible';
+    document.getElementById('userOccupation').innerHTML = data[0].userOccupation;
+    document.getElementById('userOccupation').style.visibility = 'visible';
 }
 // Emily Surface
-async function GetOutfitID(OutfitID) {
-    const response = await fetch(`https://localhost:7044/api/OutfitID/${OutfitID}`);
+async function GetClothingSeason(ClothingID) {
+    const response = await fetch(`https://localhost:7044/api/ClothingSeason/${ClothingID}`);
     const data = await response.json();
-    document.getElementById('OutfitID').innerHTML = data[0].OutfitID;
-    document.getElementById('OutfitID').style.visibility = 'visible';
+    document.getElementById('clothingSeason').innerHTML = data[0].clothingSeason;
+    document.getElementById('clothingSeason').style.visibility = 'visible';
 }
 
 

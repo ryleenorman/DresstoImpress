@@ -2,9 +2,10 @@
 @model DresstoImpress.Pages.LookBookModel
 @using DresstoImpressAPI2.Entities
 @using Microsoft.AspNetCore.Mvc;
-@{ 
-    var OutfitID = HttpContext.Request.Query["OutfitID"];
-    
+@{
+    var ClothingID = HttpContext.Request.Query["ClothingID"];
+    var clothingSeason = HttpContext.Request.Query["clothingSeason"];
+
    
 }
 
@@ -20,25 +21,11 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-
     <div class="header">
         <h1>All Clothing</h1>
         <p>Every Outfit, All the Time</p>
     </div>
-
-    <form id="OutfitID" action="/AllClothing">
-        <input type="number" id="OutfitID" label="OutfitID" />
-        <input type="button" id="submitBtn" value="Find Outfit by ID Number" onclick="GetOutfitID(document.getElementById('OutfitID').value)" class="button" />
-    </form>
-    <div id="results"></div>
-    <script type="module">GetOutfitID()</script>
-    <div id="Outfit"></div>
-    <div id="Outfit"></div>
     <div class="row">
-        <script type=“module”>
-            GetOutfitDetails(‘@OutfitID’);
-
-        </script>
         <div class="column">
          
             <img src="~/WinterSurf.png" alt="Winter Outfit" />
@@ -66,7 +53,7 @@
         </div>
         <hr class="solid">
 
-    </div>
+    </>
     <div class="row">
         <div class="column">
     
